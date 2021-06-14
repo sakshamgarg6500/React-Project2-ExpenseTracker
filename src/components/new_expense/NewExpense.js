@@ -20,9 +20,10 @@ function NewExpense(props) {
 		event.preventDefault();
 
 		const expenseData = {
+			id: Math.random(),
 			title: enteredTitle,
 			amount: enteredAmount,
-			date: enteredDate,
+			date: new Date(enteredDate),
 		};
 
 		props.onSaveExpenseData(expenseData);
